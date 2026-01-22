@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import logo from "../../public/images/logo-umb.png"
+import logo from "../assets/logo-umb.png";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -139,15 +139,31 @@ const Login = () => {
       <div className="w-full lg:w-1/2 flex items-center justify-center p-8">
         <div className="w-full max-w-md">
           {/* Mobile Logo */}
-          <div className="lg:hidden flex items-center justify-center gap-3 mb-8">
-            <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center">
-              <span className="text-slate-900 font-bold text-xl">U</span>
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold text-white">UMB Bank</h1>
-              <p className="text-xs text-amber-400">Procurement System</p>
-            </div>
-          </div>
+<div className="lg:hidden flex items-center justify-center gap-3 mb-8">
+  <div className="w-10 h-10 rounded-lg bg-white/90 flex items-center justify-center shadow-lg">
+    <img
+      src={logo}
+      alt="UMB Bank Logo"
+      className="w-10 h-10 object-contain"
+    />
+  </div>
+
+  <div className="flex flex-col">
+    <h1 className="text-2xl font-black leading-tight">
+      <span className="text-white italic [text-shadow:0_0_6px_rgba(255,255,255,0.4)]">
+        Speed
+      </span>
+      <span className="text-amber-400 ml-1 [text-shadow:0_0_10px_rgba(245,158,11,0.6)]">
+        Procure
+      </span>
+    </h1>
+
+    <p className="text-xs text-amber-400 font-semibold tracking-wide">
+      UMB Procurement Platform
+    </p>
+  </div>
+</div>
+
 
           {/* Login Card */}
           <div className="bg-white rounded-2xl shadow-2xl p-8">
