@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { ProcurementProvider } from '../../context/ProcurementContext';
+import logo from '../../assets/logo-umb.png';
 
 const Layout = ({ children }) => {
   const { user, logout, getRoleLabel } = useAuth();
@@ -89,7 +90,7 @@ const Layout = ({ children }) => {
     }
   ];
 
-  const filteredNavItems = navItems.filter(item => 
+  const filteredNavItems = navItems.filter(item =>
     item.roles.includes(user?.role)
   );
 
@@ -97,26 +98,21 @@ const Layout = ({ children }) => {
     <ProcurementProvider>
       <div className="min-h-screen bg-slate-50 flex">
         {/* Sidebar */}
-        <aside 
-          className={`fixed left-0 top-0 h-full bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white transition-all duration-300 z-40 ${
-            sidebarCollapsed ? 'w-20' : 'w-64'
-          }`}
+        <aside
+          className={`fixed left-0 top-0 h-full bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white transition-all duration-300 z-40 ${sidebarCollapsed ? 'w-20' : 'w-64'
+            }`}
         >
           {/* Logo */}
           <div className="h-16 flex items-center justify-between px-4 border-b border-slate-700/50">
             {!sidebarCollapsed && (
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-lg">
-                  <span className="text-slate-900 font-bold text-lg">
-                    <img src="../../public/images/logo-umb.png" alt="UMB Bank Logo" className="w-8 h-8" />
-                  </span>
-                </div>
+                <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center shadow-lg"> <span className="text-slate-900 font-bold text-lg"> <img src={logo} alt="UMB Bank Logo" className="w-8 h-8" /> </span> </div>
                 <div>
                   <h1 className="font-bold text-lg tracking-tight">
 
-  <span className="text-white italic [text-shadow:0_0_6px_rgba(255,255,255,0.3)]"> Speed</span>
-  <span className="text-amber-400 not-italic [text-shadow:0_0_8px_rgba(245,158,11,0.3)]">Procure</span>
-</h1>
+                    <span className="text-white italic [text-shadow:0_0_6px_rgba(255,255,255,0.3)]"> Speed</span>
+                    <span className="text-amber-400 not-italic [text-shadow:0_0_8px_rgba(245,158,11,0.3)]">Procure</span>
+                  </h1>
                   <p className="text-xs text-slate-400">Procurement System</p>
                 </div>
               </div>
@@ -139,11 +135,10 @@ const Layout = ({ children }) => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200 group ${
-                    isActive 
-                      ? 'bg-amber-500/20 text-amber-400 shadow-lg shadow-amber-500/10' 
+                  className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200 group ${isActive
+                      ? 'bg-amber-500/20 text-amber-400 shadow-lg shadow-amber-500/10'
                       : 'text-slate-300 hover:bg-slate-700/50 hover:text-white'
-                  }`}
+                    }`}
                 >
                   <span className={isActive ? 'text-amber-400' : 'text-slate-400 group-hover:text-white'}>
                     {item.icon}
@@ -211,8 +206,8 @@ const Layout = ({ children }) => {
 
                 {showUserMenu && (
                   <>
-                    <div 
-                      className="fixed inset-0 z-40" 
+                    <div
+                      className="fixed inset-0 z-40"
                       onClick={() => setShowUserMenu(false)}
                     />
                     <div className="absolute right-0 top-full mt-2 w-64 bg-white rounded-xl shadow-xl border border-slate-200 py-2 z-50">
