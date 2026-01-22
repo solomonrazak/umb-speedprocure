@@ -108,7 +108,7 @@ const Layout = ({ children }) => {
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-lg">
                   <span className="text-slate-900 font-bold text-lg">
-                    <img src="../public/images/logo-umb.png" alt="UMB Bank Logo" className="w-8 h-8" />
+                    <img src="../../public/images/logo-umb.png" alt="UMB Bank Logo" className="w-8 h-8" />
                   </span>
                 </div>
                 <div>
