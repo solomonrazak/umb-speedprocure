@@ -93,7 +93,7 @@ const Login = () => {
             <div className="flex flex-col gap-2">
   <h1 className="text-5xl font-black">
   <span className="text-white italic [text-shadow:0_0_10px_rgba(255,255,255,0.3)]">Speed</span>
-  <span className="text-amber-400 not-italic [text-shadow:0_0_15px_rgba(245,158,11,0.5)]">Procure</span>
+  <span className="text-amber-500 not-italic [text-shadow:0_0_15px_rgba(245,158,11,0.5)]">Procure</span>
 </h1>
 <p className="text-amber-500 text-2xl font-bold">Universal Merchant Bank</p>
 </div>
